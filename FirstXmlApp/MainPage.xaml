@@ -8,30 +8,43 @@
     mc:Ignorable="d"
     Background="Black">
 
-    <ScrollViewer Padding="10">
-        
-        <StackPanel Orientation="Horizontal" Spacing="10">
+    <ScrollViewer Padding="20">
 
-            <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <ListView x:Name="MyList">
 
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="/Assets/1.png" Stretch="UniformToFill"/>
-                </Ellipse.Fill>
+            <ListView.ItemTemplate>
                 
-            </Ellipse>
+                <DataTemplate>
+                
+                    <StackPanel Orientation="Horizontal" Spacing="10">
 
-            <StackPanel>
+                        <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                <TextBlock Text="Franck" FontSize="12" FontWeight="Bold"/>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding Photo}" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                
+                        </Ellipse>
 
-                <TextBlock Text="tu es ou?? le teacher te..." TextWrapping="Wrap"/>
+                        <StackPanel>
 
-            </StackPanel>
+                            <TextBlock Text="{Binding FullName}" FontSize="12" FontWeight="Bold"/>
 
-            <TextBlock Text="16:02" FontSize="10"/>
+                            <TextBlock Text="{Binding ShortMessage}" TextWrapping="Wrap"/>
 
-        </StackPanel>
-        
+                        </StackPanel>
+
+                        <TextBlock Text="{Binding Time}" FontSize="10"/>
+
+                    </StackPanel>
+
+                </DataTemplate>
+    
+            </ListView.ItemTemplate>
+            
+            
+        </ListView>
+         
     </ScrollViewer>
     
 </Page>

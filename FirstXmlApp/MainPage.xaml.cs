@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FirstXmlApp.Models;
+using FirstXmlApp.VieuwModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,17 @@ namespace FirstXmlApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private readonly ChatListVieuwModels VieuwModels;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            VieuwModels = new ChatListVieuwModels();
+
+            var items = VieuwModels.Getitems();
+
+            MyList.ItemsSource = items;
         }
     }
 }
