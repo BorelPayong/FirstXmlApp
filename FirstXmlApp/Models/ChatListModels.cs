@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstXmlApp.Models
 {
-    public class ChatList
+    public class ChatListModels
     {
         public string FullName { get; set; }
 

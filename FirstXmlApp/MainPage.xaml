@@ -6,9 +6,32 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Black">
 
-    <Grid>
+    <ScrollViewer Padding="10">
+        
+        <StackPanel Orientation="Horizontal" Spacing="10">
 
-    </Grid>
+            <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Assets/1.png" Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+                
+            </Ellipse>
+
+            <StackPanel>
+
+                <TextBlock Text="Franck" FontSize="12" FontWeight="Bold"/>
+
+                <TextBlock Text="tu es ou?? le teacher te..." TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+            <TextBlock Text="16:02" FontSize="10"/>
+
+        </StackPanel>
+        
+    </ScrollViewer>
+    
 </Page>
